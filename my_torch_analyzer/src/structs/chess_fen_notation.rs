@@ -1,6 +1,6 @@
-use std::fmt;
-
 use crate::structs::enum_chess_prediction::ChessPrediction;
+use crate::utils::file_to_vec_string::read_lines_to_vec;
+use std::fmt;
 
 pub struct ChessFenNotation {
     board: String,
@@ -13,7 +13,7 @@ pub struct ChessFenNotation {
 impl ChessFenNotation {
     pub fn new() -> ChessFenNotation {
         return ChessFenNotation {
-            board: "".to_string(),
+            board: String::new(),
             actual_turn: '\0',
             nb_semi_turn: 0,
             nb_turn: 0,
@@ -23,7 +23,7 @@ impl ChessFenNotation {
 
     // Example of line
     // 8/8/R2k4/4r1p1/8/5K2/5P2/8 b - - 7 59 Check White
-    pub fn chess_fen_notation_from_line(line: String) -> ChessFenNotation {
+    fn chess_fen_notation_from_line(&self, line: String) -> ChessFenNotation {
         let mut chess_line_notation = ChessFenNotation::new();
         let mut arr = line.split(" ");
 
@@ -41,6 +41,17 @@ impl ChessFenNotation {
                 .trim(),
         );
         chess_line_notation
+    }
+
+    pub fn chess_fen_notation_from_file(&mut self, filepath: String) -> Vec<ChessFenNotation> {
+        let mut chess_vec: Vec<ChessFenNotation> = Vec::new();
+        let lines = read_lines_to_vec(filepath);
+
+        for line in lines {
+            chess_vec.push(self.chess_fen_notation_from_line(line));
+        }
+
+        chess_vec
     }
 }
 
