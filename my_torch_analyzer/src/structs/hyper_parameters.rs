@@ -4,12 +4,12 @@ use serde::Deserialize;
 
 #[derive(Deserialize)]
 pub struct HyperParameters {
-    inputs: u32,
-    hidden_layers: u32,
-    hidden_neurons: u32,
-    outputs: u32,
-    epochs: u32,
-    learning_rate: f64,
+    pub inputs: u32,
+    pub hidden_layers: u32,
+    pub hidden_neurons: u32,
+    pub outputs: u32,
+    pub epochs: u32,
+    pub learning_rate: f64,
 }
 
 impl fmt::Debug for HyperParameters {

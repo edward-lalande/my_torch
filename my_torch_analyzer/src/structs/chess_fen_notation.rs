@@ -77,12 +77,13 @@ impl ChessFenNotation {
         chess_line_notation
     }
 
-    pub fn chess_fen_notation_from_file(&mut self, filepath: String) -> Vec<ChessFenNotation> {
+    pub fn chess_fen_notation_from_file(filepath: String) -> Vec<ChessFenNotation> {
+        let mut chess_fen_notation: ChessFenNotation = ChessFenNotation::new();
         let mut chess_vec: Vec<ChessFenNotation> = Vec::new();
         let lines = read_lines_to_vec(filepath);
 
         for line in lines {
-            chess_vec.push(self.chess_fen_notation_from_line(line));
+            chess_vec.push(chess_fen_notation.chess_fen_notation_from_line(line));
         }
 
         chess_vec

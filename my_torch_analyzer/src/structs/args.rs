@@ -1,5 +1,6 @@
 use std::fmt;
 
+#[derive(Clone)]
 pub struct TorchArgs {
     pub is_predict: bool,
     pub is_train: bool,
