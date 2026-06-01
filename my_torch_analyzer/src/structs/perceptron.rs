@@ -1,3 +1,4 @@
+#![allow(unused)]
 use serde::Deserialize;
 use std::fmt;
 use std::fs::File;
