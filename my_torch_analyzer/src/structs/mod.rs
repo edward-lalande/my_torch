@@ -5,3 +5,4 @@ pub mod layers;
 pub mod mlp;
 pub mod neuron;
 pub mod perceptron;
+pub mod hyper_parameters;

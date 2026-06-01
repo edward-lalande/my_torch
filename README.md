@@ -44,13 +44,9 @@ Creates a serialized binary file (`perceptron.nn`) from your JSON configuration.
   "hidden_neurons": 50,
   "outputs": 1,
   "epochs": 30,
-  "learning_rate": 0.01,
-  "weights": [0.0, 0.0],
-  "bias": 0.0
+  "learning_rate": 0.01
 }
 ```
-
-> **Note:** Always initialize `weights` and `bias` to `0.0`. The analyzer updates these dynamically during training.
 
 ### 2️⃣ Train & Predict
 
@@ -92,8 +88,6 @@ chess-state-predictor/
 | `outputs` | int | Number of output nodes |
 | `epochs` | int | Training iterations |
 | `learning_rate` | float | Gradient descent step size (default: 0.01) |
-| `weights` | array | Initial weights (leave as `[0.0, ...]`) |
-| `bias` | float | Initial bias (leave as `0.0`) |
 
 ---
 
@@ -141,9 +135,7 @@ chess-state-predictor/
   "hidden_neurons": 4,
   "outputs": 1,
   "epochs": 100,
-  "learning_rate": 0.5,
-  "weights": [0.0, 0.0],
-  "bias": 0.0
+  "learning_rate": 0.5
 }
 ```
 
