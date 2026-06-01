@@ -1,8 +1,8 @@
 {
-  "inputs": 2,
-  "hidden_layers": 2,
-  "hidden_neurons": 50,
-  "outputs": 1,
+  "inputs": 771,
+  "hidden_layers": 24,
+  "hidden_neurons": 32,
+  "outputs": 4,
   "epochs": 30,
   "learning_rate": 0.01
 }
