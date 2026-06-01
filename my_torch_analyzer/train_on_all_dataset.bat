@@ -1,0 +1,9 @@
+.\my_torch --train --save first_try.nn .\hyper_parameters.nn ..\dataset\check\10_pieces.txt
+.\my_torch --train --save first_try.nn .\first_try.nn ..\dataset\check\20_pieces.txt
+.\my_torch --train --save first_try.nn .\first_try.nn ..\dataset\check\many_pieces.txt
+.\my_torch --train --save first_try.nn .\first_try.nn ..\dataset\checkmate\10_pieces.txt
+.\my_torch --train --save first_try.nn .\first_try.nn ..\dataset\checkmate\20_pieces.txt
+.\my_torch --train --save first_try.nn .\first_try.nn ..\dataset\checkmate\many_pieces.txt
+.\my_torch --train --save first_try.nn .\first_try.nn ..\dataset\nothing\10_pieces.txt
+.\my_torch --train --save first_try.nn .\first_try.nn ..\dataset\nothing\20_pieces.txt
+.\my_torch --train --save first_try.nn .\first_try.nn ..\dataset\nothing\many_pieces.txt
