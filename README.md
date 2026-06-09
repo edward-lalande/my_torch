@@ -113,7 +113,6 @@ my_torch/
 |---------|--------|----------|
 | **V1** | ✅ Done | Simple Perceptron, Perceptron Learning Rule, AND gate training, binary serialization |
 | **V2** | ✅ Current | Full MLP, LeakyReLU, Xavier init, backpropagation, MSE loss, chess FEN classification |
-| **V3** | 🔮 Goal | Softmax output, Adam optimizer, training on large-scale real game datasets |
 
 ---
 
